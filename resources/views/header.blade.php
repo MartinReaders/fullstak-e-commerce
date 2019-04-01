@@ -44,7 +44,7 @@
                 <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="logout.php"  style="padding-right:10px;">EXIT</a></button>
                 <?php else : ?>
                 <span style="color:red">Vous n'êtes pas connecté!</span><hr>
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; text-align: center;"><a href="login.php" style="padding-right:10px;">SE CONNECTER</a></button>
+                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
                 <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="register.php">INSCRIPTION</a></button>
             <?php endif; ?>
 
