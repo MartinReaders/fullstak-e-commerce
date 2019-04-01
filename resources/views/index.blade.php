@@ -122,7 +122,7 @@ Bonjour, <?php echo $_SESSION['logged_user']->login; ?> !
 
 
 <?php
-$DB= new PDO('mysql:host=localhost;dbname=e-sport', 'root2', 'Dta2018!!');
+$DB= new PDO('mysql:host=localhost;dbname=fullstak-e-commerce', 'root2', 'Dta2018!!');
 $produit = $DB->prepare("SELECT * FROM produit");
 if ($produit->execute(array())) {
   while ($row = $produit->fetch()) {?>
