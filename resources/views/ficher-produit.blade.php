@@ -8,7 +8,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <body>
 <?php
-$DB= new PDO('mysql:host=localhost;dbname=fullstak-e-commerce', 'root2', 'Dta2018!!');
+$DB= new PDO('mysql:host=localhost;dbname=fullstack-e-commerce', 'root', 'Readers11!');
 $produit = $DB->prepare("SELECT * FROM produit where id = $_GET[id] ");
 if ($produit->execute(array())) {
     while ($row = $produit->fetch()) {?>
@@ -31,9 +31,6 @@ if ($produit->execute(array())) {
 
                 <div class="product_description">
                 <p><?php echo $row['description'];?></p>
-                </div>
-                <div class="related_info">
-                    <span class="sku">SKU:1234567</span><span class="quantity">QTY:85</span>
                 </div>
 
                     <div class="buying">
