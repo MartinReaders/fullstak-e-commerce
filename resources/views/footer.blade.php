@@ -1,9 +1,9 @@
 <link href="{{ URL ::asset('css/style.css') }}" rel="stylesheet">
 
 <!-- buttons NEXT et Derier-->
-<div class="button-bar">
-    <a href="#" class="button prev">Previous</a>
-    <a href="#" class="button next">Next</a>
+<div class="button-bar" style="align-content: center; color: #1b1e21;">
+    <a href="#" class="button prev" style="color: #1b1e21; margin-left: 45%;">Previous</a>
+    <a href="#" class="button next" style="color: #1b1e21; margin-left: 10px;">Next</a>
 </div>
 <!-- buttons NEXT et Derier-->
 

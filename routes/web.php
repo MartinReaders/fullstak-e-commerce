@@ -42,3 +42,6 @@ Route::get('/homme', function () {
 Route::get('/femme', function () {
     return view('femme');
 });
+
+Route::get('/panier', 'HomeController@panier')->name('panier');
+Route::get('/produitdel', 'HomeController@produitdel')->name('produitdel');

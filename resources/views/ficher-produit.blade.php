@@ -1,4 +1,3 @@
-
 <link href="{{ URL ::asset('css/style-ficheproduit.css') }}" rel="stylesheet">
 
 <header>

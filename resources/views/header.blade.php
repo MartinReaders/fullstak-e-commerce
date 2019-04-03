@@ -36,9 +36,9 @@
 
 
 
-                <?php if( isset($_SESSION['logged_user'])) : ?>
+                <?php if( isset($_SESSION['logged'])) : ?>
                 <span style="color: green;font-weight:bold">Accès !</span> <br>
-                Bonjour, <?php echo $_SESSION['logged_user']->login; ?> !
+                Bonjour, <?php echo $_SESSION['logged']->login; ?> !
                 <hr>
 
                 <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="logout"  style="padding-right:10px;">EXIT</a></button>
@@ -55,7 +55,7 @@
 
         </div>
         </div>
-        </div></a></div><a class="cart" href="card.html">
+        </div></a></div><a class="cart" href="panier">
             <div class="cart-icon">1</div></a>
         <!-- header -->
 
