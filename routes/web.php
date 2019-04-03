@@ -12,10 +12,33 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('homme');
 });
+
+
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
 
 Route::get('/ficher-produit', function () {
     return view('ficher-produit');
 });
 
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/filter', function () {
+    return view('filter');
+});
+
+Route::get('/homme', function () {
+    return view('homme');
+});
+
+Route::get('/femme', function () {
+    return view('femme');
+});

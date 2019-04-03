@@ -1,9 +1,10 @@
 
+@extends('index')
 
-
+@section('content')
 
 <?php
-$DB= new PDO('mysql:host=localhost;dbname=fullstak-e-commerce', 'root2', 'Dta2018!!');
+$DB= new PDO('mysql:host=localhost;dbname=fullstack-e-commerce', 'root', 'Readers11!');
 $produit = $DB->prepare("SELECT * FROM produit");
 if ($produit->execute(array())) {
   while ($row = $produit->fetch()) {?>
@@ -35,6 +36,8 @@ if ($produit->execute(array())) {
   }
 }
 ?>
+
+@endsection
 
 
 

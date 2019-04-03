@@ -25,7 +25,7 @@
 <!-- header -->
 
 <section class="header">
-    <header><a class="logo" href="index.html"><img src="img/bitcoin.png" alt="">E-Sport</a>
+    <header><a class="logo" href="/"><img src="img/bitcoin.png" alt="">E-Sport</a>
         <div class="search">
             <input class="search__text" type="text"/>
             <button class="search__button">
@@ -41,11 +41,11 @@
                 Bonjour, <?php echo $_SESSION['logged_user']->login; ?> !
                 <hr>
 
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="logout.php"  style="padding-right:10px;">EXIT</a></button>
+                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="logout"  style="padding-right:10px;">EXIT</a></button>
                 <?php else : ?>
                 <span style="color:red">Vous n'êtes pas connecté!</span><hr>
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; text-align: center;"><a href="login.php" style="padding-right:10px;">SE CONNECTER</a></button>
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="register.php">INSCRIPTION</a></button>
+                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
+                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="register">INSCRIPTION</a></button>
             <?php endif; ?>
 
 
@@ -80,9 +80,9 @@
     <div class="slct-drpdwn">
         <label for="options" id="fltr_lbl">Trier par</label>
         <select name='options' id="fltr_optns">
-            <option value='option-1'>Populaire</option>
-            <option value='option-2'>Récent</option>
-            <option value='option-3'>Vérifié</option>
+            <option value=''>T-shirt</option>
+            <option value='option-2'>Short</option>
+            <option value='option-3'>Sacs</option>
         </select>
     </div>
 
