@@ -1,5 +1,3 @@
-
-
 <header>
 @include('header')
 </header>

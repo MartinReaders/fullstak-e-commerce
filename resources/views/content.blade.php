@@ -1,7 +1,3 @@
-
-
-
-
 <?php
 $DB= new PDO('mysql:host=localhost;dbname=fullstak-e-commerce', 'root2', 'Dta2018!!');
 $produit = $DB->prepare("SELECT * FROM produit");
@@ -13,7 +9,7 @@ if ($produit->execute(array())) {
   <img src="<?php echo $row['pathImage']?>" style="border-radius: 5px; margin: 5px 5px;">
         <div class="game-card-overlay">
           <div class="overlay-button" id="overlay-double">
-                <a href="panier.php?id=<?php echo $row['id']?>"><p>Ajouter au panier</p></a>
+                <a href="panier?id=<?php echo $row['id']?>"><p>Ajouter au panier</p></a>
           </div>
             <div class="overlay-button" id="overlay-double">
               <a href="ficher-produit?id=<?php echo $row['id']?>">
