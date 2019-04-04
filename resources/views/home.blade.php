@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 @extends('index')
+=======
+
+
+@extends('layouts.app')
+
+
+
+>>>>>>> version-final-page-dinsrtiption
 @section('content')
     <br>
     <br>
@@ -36,4 +45,8 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> version-final-page-dinsrtiption
 @endsection

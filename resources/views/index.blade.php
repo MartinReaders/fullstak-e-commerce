@@ -32,6 +32,7 @@
         </div>
         <div class="info"><div class="cour"><img src="img/like.png" alt="" class="like"></div><a href="">Liste de souhaits</a><a href="/">Livraison&nbsp;et&nbsp;Paiement</a><a href="/">Nous contacter</a><a href="#"><!-- Button trigger modal -->
 
+<<<<<<< HEAD
 
 
                 <?php if( isset($_SESSION[('logged')])) : ?>
@@ -51,11 +52,24 @@
 
 
 
+=======
+            @auth
+                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px;">Deconnextion</a></button>
+                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="register">Mon compte</a></button>
+                 <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
+>>>>>>> version-final-page-dinsrtiption
         </div>
         </div>
         </div></a></div><a class="cart" href="panier">
             <div class="cart-icon">1</div></a>
-        <!-- header -->
+            @endauth @guest
+                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
+                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="register">INSCRIPTION</a></button>
+        <p style="color:red;">Vous n'etes pas connecter</p>
+         </div>
+
+            @endguest
+
 
 
 
@@ -75,6 +89,7 @@
 <!-- les buttons scroll tier-->
 
 <div class="fltr_cont">
+<<<<<<< HEAD
     <div class="slct-drpdwn">
         <label for="options" id="fltr_lbl">Trier par</label>
         <select name='options' id="fltr_optns">
@@ -83,35 +98,30 @@
             <option value='option-3'>Sacs</option>
         </select>
     </div>
+=======
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Trier par
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="femme">T-shirt</a>
+            <a class="dropdown-item" href="#">Short</a>
+            <a class="dropdown-item" href="#">Sac</a>
+>>>>>>> version-final-page-dinsrtiption
 
-    <div class="slct-drpdwn">
-        <label for="options" id="fltr_lbl">Genre</label>
-        <select name='options' id="fltr_optns">
-            <option value='option-1'>Tous les genres
-            </option>
-            <option value='option-2'>Option 2</option>
-            <option value='option-3'>Option 3</option>
-            <option value='option-1'>Option 1</option>
-            <option value='option-2'>Option 2</option>
-            <option value='option-3'>Option 3</option>
-            <option value='option-1'>Option 1</option>
-            <option value='option-2'>Option 2</option>
-            <option value='option-3'>Option 3</option>
-            <option value='option-1'>Option 1</option>
-            <option value='option-2'>Option 2</option>
-            <option value='option-3'>Option 3</option>
-        </select>
+        </div>
     </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Trier par
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="femme">T-shirt</a>
+            <a class="dropdown-item" href="#">Short</a>
+            <a class="dropdown-item" href="#">Sac</a>
 
-    <div class="slct-drpdwn">
-        <label for="options" id="fltr_lbl">location</label>
-        <select name='options' id="fltr_optns">
-            <option value="Brooklyn">Saint-Étienne</option>
-            <option value="Manhattan">Lyon</option>
-            <option value="Queens">Paris</option>
-        </select>
+        </div>
     </div>
-
 </div>
 <!-- les buttons scroll tier-->
 
