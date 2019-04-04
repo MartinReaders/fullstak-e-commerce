@@ -6,13 +6,13 @@
 <?php
 $produits = DB::select("SELECT * FROM produit");
 foreach ($produits as $row) { ?>
-    <div class="card-group" style="margin: 10px;padding: 10px; width: 400px; display: inline-block;">
+    <div class="card-group" style="margin: 10px; padding: 10px; width: 400px; display: inline-block;">
   <div class="card" style="margin: 10px;">
     <div class="game-pic">
   <img src="<?php echo $row->pathImage?>" style="border-radius: 5px; margin: 5px 5px;">
         <div class="game-card-overlay">
           <div class="overlay-button" id="overlay-double">
-                <a href="panier.php?id=<?php echo $row->id?>"><p>Ajouter au panier</p></a>
+                <a href="panier?id=<?php echo $row->id?>"><p>Ajouter au panier</p></a>
           </div>
             <div class="overlay-button" id="overlay-double">
               <a href="ficher-produit?id=<?php echo $row->id?>">
