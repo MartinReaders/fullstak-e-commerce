@@ -1,6 +1,8 @@
 @extends('index')
 
 @section('content')
+    <br>
+    <br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -61,6 +63,7 @@
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Mot de passe oublié?') }}
                                     </a>
+                                    <br>
                                 @endif
                             </div>
                         </div>
@@ -70,10 +73,7 @@
         </div>
     </div>
 </div>
+    <br>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> version-final-page-dinsrtiption
 @endsection
 

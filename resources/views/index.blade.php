@@ -32,43 +32,25 @@
         </div>
         <div class="info"><div class="cour"><img src="img/like.png" alt="" class="like"></div><a href="">Liste de souhaits</a><a href="/">Livraison&nbsp;et&nbsp;Paiement</a><a href="/">Nous contacter</a><a href="#"><!-- Button trigger modal -->
 
-<<<<<<< HEAD
-
-
-                <?php if( isset($_SESSION[('logged')])) : ?>
-                <span style="color: green;font-weight:bold">Accès !</span> <br>
-                Bonjour, <?php echo $_SESSION[('logged')]->login; ?> !
-                <hr>
-
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="logout"  style="padding-right:10px;">EXIT</a></button>
-                <?php else : ?>
-                <span style="color:red">Vous n'êtes pas connecté!</span><hr>
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
-                <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="register">INSCRIPTION</a></button>
-            <?php endif; ?>
 
 
 
+                @auth
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px;">Deconnextion</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="register">Mon compte</a></button>
+                    <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
 
-
-
-=======
-            @auth
-                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px;">Deconnextion</a></button>
-                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="register">Mon compte</a></button>
-                 <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
->>>>>>> version-final-page-dinsrtiption
         </div>
         </div>
         </div></a></div><a class="cart" href="panier">
             <div class="cart-icon">1</div></a>
-            @endauth @guest
-                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
-                <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="register">INSCRIPTION</a></button>
-        <p style="color:red;">Vous n'etes pas connecter</p>
-         </div>
+        @endauth @guest
+            <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
+            <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="register">INSCRIPTION</a></button>
+            <p style="color:red;">Vous n'etes pas connecter</p>
+            </div>
 
-            @endguest
+        @endguest
 
 
 
@@ -89,25 +71,16 @@
 <!-- les buttons scroll tier-->
 
 <div class="fltr_cont">
-<<<<<<< HEAD
-    <div class="slct-drpdwn">
-        <label for="options" id="fltr_lbl">Trier par</label>
-        <select name='options' id="fltr_optns">
-            <a href="t-shirt"><option value=''>T-shirt</option></a>
-            <option value='option-2'>Short</option>
-            <option value='option-3'>Sacs</option>
-        </select>
-    </div>
-=======
+
     <div class="btn-group">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Trier par
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="femme">T-shirt</a>
-            <a class="dropdown-item" href="#">Short</a>
-            <a class="dropdown-item" href="#">Sac</a>
->>>>>>> version-final-page-dinsrtiption
+            <a class="dropdown-item" href="t-shirt">T-shirt</a>
+            <a class="dropdown-item" href="short">Short</a>
+            <a class="dropdown-item" href="sac">Sac</a>
+
 
         </div>
     </div>
@@ -116,7 +89,7 @@
             Trier par
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="femme">T-shirt</a>
+            <a class="dropdown-item" href="#">T-shirt</a>
             <a class="dropdown-item" href="#">Short</a>
             <a class="dropdown-item" href="#">Sac</a>
 
@@ -134,13 +107,6 @@
 
 
 <link href="{{ URL ::asset('css/style.css') }}" rel="stylesheet">
-
-<!-- buttons NEXT et Derier-->
-<div class="button-bar" style="align-content: center; color: #1b1e21;">
-    <a href="#" class="button prev" style="color: #1b1e21; margin-left: 45%;">Previous</a>
-    <a href="#" class="button next" style="color: #1b1e21; margin-left: 10px;">Next</a>
-</div>
-<!-- buttons NEXT et Derier-->
 
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4"  style="background-color: #1b1e21; color: white;">
@@ -203,7 +169,6 @@
 </body>
 
 </html>
-
 
 
 
