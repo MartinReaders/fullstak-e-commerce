@@ -7,7 +7,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <body>
 <?php
-$DB= new PDO('mysql:host=localhost;dbname=fullstack-e-commerce', 'root', 'Readers11!');
+$DB= new PDO('mysql:host=localhost;dbname=fullstak-e-commerce', 'root2', 'Dta2018!!');
 $produit = $DB->prepare("SELECT * FROM produit where id = $_GET[id] ");
 if ($produit->execute(array())) {
     while ($row = $produit->fetch()) {?>

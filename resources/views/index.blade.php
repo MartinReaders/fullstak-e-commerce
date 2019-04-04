@@ -34,9 +34,9 @@
 
 
 
-                <?php if( isset($_SESSION['logged_user'])) : ?>
+                <?php if( isset($_SESSION[('logged')])) : ?>
                 <span style="color: green;font-weight:bold">Accès !</span> <br>
-                Bonjour, <?php echo $_SESSION['logged_user']->login; ?> !
+                Bonjour, <?php echo $_SESSION[('logged')]->login; ?> !
                 <hr>
 
                 <button style="background-color: #007bff;border-radius: 5px;border-color:#007bff; "><a href="logout"  style="padding-right:10px;">EXIT</a></button>
@@ -53,7 +53,7 @@
 
         </div>
         </div>
-        </div></a></div><a class="cart" href="card.html">
+        </div></a></div><a class="cart" href="panier">
             <div class="cart-icon">1</div></a>
         <!-- header -->
 
@@ -65,7 +65,7 @@
 <!-- nav-bar1 -->
 <section class="nav">
     <nav>
-        <div class="nav col-12 flex1"><a href="/"><span>Homme</span></a><a href="/femme"><span>Femme</span></a><a href="/"> <span>Enfant</span></a><a href="/"> <span>Marques</span></a><a href="/"> <span>Sports</span></a><a href="/"> <span>Football</span></a><a href="/"> <span>Accsessoires</span></a><a href="/"> <span>MMA-Arts martiaux mixtes</span></a><a href="/"> <span>Plein air</span></a><a href="/"> <span>Course</span></a></div>
+        <div class="nav col-12 flex1"><a href="/"><span>Homme</span></a><a href="reebok"><span>Reebok</span><a href="nike"> <span>Nike</span></a><a href="lonsdale"> <span>Lonsdale</span></a><a href="adidas"> <span>Adidas</span></a><a href="tapout"> <span>Tapout</span></a><a href="everlast"> <span>Everlast</span></a>
     </nav>
 
 </section>
@@ -78,7 +78,7 @@
     <div class="slct-drpdwn">
         <label for="options" id="fltr_lbl">Trier par</label>
         <select name='options' id="fltr_optns">
-            <option value=''>T-shirt</option>
+            <a href="t-shirt"><option value=''>T-shirt</option></a>
             <option value='option-2'>Short</option>
             <option value='option-3'>Sacs</option>
         </select>
@@ -123,18 +123,17 @@
 
 
 
-
 <link href="{{ URL ::asset('css/style.css') }}" rel="stylesheet">
 
 <!-- buttons NEXT et Derier-->
-<div class="button-bar">
-    <a href="#" class="button prev">Previous</a>
-    <a href="#" class="button next">Next</a>
+<div class="button-bar" style="align-content: center; color: #1b1e21;">
+    <a href="#" class="button prev" style="color: #1b1e21; margin-left: 45%;">Previous</a>
+    <a href="#" class="button next" style="color: #1b1e21; margin-left: 10px;">Next</a>
 </div>
 <!-- buttons NEXT et Derier-->
 
 <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+<footer class="page-footer font-small special-color-dark pt-4"  style="background-color: #1b1e21; color: white;">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -188,6 +187,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
 
 </body>
