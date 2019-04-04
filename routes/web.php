@@ -12,10 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('homme');
+    return view('contents');
 });
 
-
+Route::get('/connecter', function () {
+    return view('connecter');
+});
 
 
 Route::get('/login', function () {
@@ -30,13 +32,10 @@ Route::get('/ficher-produit', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::get('/filter', function () {
-    return view('filter');
-});
-
-Route::get('/homme', function () {
-    return view('homme');
+Route::get('/content', function () {
+    return view('contents');
 });
 
 Route::get('/femme', function () {

@@ -1,8 +1,6 @@
-@extends('layouts.app')
+@extends('index')
 
-<header>
-    @include('header')
-</header>
+
 
 @section('content')
 <div class="container">
@@ -79,8 +77,6 @@
     </div>
 </div>
 
-<footer>
-    @include('footer')
-</footer>
+
 @endsection
 

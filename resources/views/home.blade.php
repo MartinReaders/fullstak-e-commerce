@@ -1,8 +1,7 @@
-<footer>
-    @include('header')
-</footer>
+
 
 @extends('layouts.app')
+
 
 
 @section('content')
@@ -26,7 +25,5 @@
     </div>
 </div>
 
-<footer>
-    @include('footer')
-</footer>
+
 @endsection
