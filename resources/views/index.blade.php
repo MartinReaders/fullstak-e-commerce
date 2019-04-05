@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/olimpycs_17_icon-icons.com_68623.ico">
+
 </head>
 
 <body>
@@ -37,7 +38,7 @@
 
                 @auth
                     <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px; text-decoration:none;">Deconnextion</a></button>
-                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="/register/" style="text-decoration:none">Mon compte</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="home" style="text-decoration:none">Mon compte</a></button>
                     <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
 
         </div>

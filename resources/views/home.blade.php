@@ -1,18 +1,17 @@
-@extends('layouts.app')
+@extends('index')
 
 @section('content')
     <br>
     <br>
 
 <div class="container">
-
+    <p style="color:green;">Bienvenue sur votre compte: {{ Auth::user()->name }} </p>
     <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
 
-                <div class="card-header">
-                    Tableau de bord</div>
+                <div class="card-header">Vous êtes Connecter!</div>
     <br>
                 <div class="card-body">
                     @if (session('status'))
@@ -20,8 +19,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                        <a href="changename" style="text-decoration: none;"><p style="color: black;">Modifier votre Nom</p></a>
+                        <a href="changepassword" style="text-decoration: none;"><p style="color: black;">Modifier votre mot de Passe</p></a>
 
-                        Vous êtes Connecter!
+
                 </div>
 
                 <div class="#" style="text-align: center;">
@@ -36,4 +37,6 @@
         </div>
     </div>
 </div>
+    <br>
+    <br>
 @endsection
