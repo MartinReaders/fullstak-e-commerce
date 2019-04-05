@@ -37,8 +37,8 @@
 
 
                 @auth
-                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px; text-decoration:none;">Deconnextion</a></button>
-                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="home" style="text-decoration:none">Mon compte</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="/logout/" style="padding-right:10px; text-decoration:none;">Deconnextion</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="/home/" style="text-decoration:none">Mon compte</a></button>
                     <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
 
         </div>

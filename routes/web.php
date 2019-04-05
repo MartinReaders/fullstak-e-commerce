@@ -46,12 +46,15 @@ Route::get('/fiche-produit/{id}', 'ProduitController@marque')->name('fichier-pro
 Route::get('/panier/{id}', 'ProduitController@marque')->name('panier');
 
 Route::get('/changename', function () {
-Route::post('/changePassword','CompteController@changePassword')->name('changePassword');
-Route::get('/changepassword', function () {
-Route::post('/changeName','NameController@changeName')->name('changeName');
-});
-    return view('changepassword');
     return view('changename');
 });
+Route::post('/changePassword','CompteController@changePassword')->name('changePassword');
+
+Route::get('/changepassword', function () {
+    return view('changepassword');
+});
+Route::post('/changeName','NameController@changeName')->name('changeName');
+
+
 Route::get('/panier', 'HomeController@panier')->name('panier');
 Route::get('/produitdel', 'HomeController@produitdel')->name('produitdel');

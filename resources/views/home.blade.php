@@ -19,8 +19,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <a href="changename" style="text-decoration: none;"><p style="color: black;">Modifier votre Nom</p></a>
-                        <a href="changepassword" style="text-decoration: none;"><p style="color: black;">Modifier votre mot de Passe</p></a>
+                        <a href="/changename/" style="text-decoration: none;"><p style="color: black;">Modifier votre Nom</p></a>
+                        <a href="/changepassword/" style="text-decoration: none;"><p style="color: black;">Modifier votre mot de Passe</p></a>
 
 
                 </div>
