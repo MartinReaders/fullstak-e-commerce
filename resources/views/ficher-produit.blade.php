@@ -1,54 +1,52 @@
-<link href="{{ URL ::asset('css/style-ficheproduit.css') }}" rel="stylesheet">
+@extends('index')
 
-<header>
-    @include('header')
-</header>
+@section('content')
+    <br>
+    <br>
 
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<body>
 <?php
-$DB= new PDO('mysql:host=localhost;dbname=fullstak-e-commerce', 'root2', 'Dta2018!!');
-$produit = $DB->prepare("SELECT * FROM produit where id = $_GET[id] ");
-if ($produit->execute(array())) {
-    while ($row = $produit->fetch()) {?>
-
-<div id="wrap">
+$produits = DB::select("SELECT * FROM produit where id = $_GET[id]");
+foreach ($produits as $row) { ?>
+<div id="wrap" style="display: inline-block; background-color: white; margin-left: 300px; width: 600px;">
     <div id="product_layout_1">
         <div class="top">
             <div class="product_images">
-                <div class="product_image_1">
-                    <img src="<?php echo $row['pathImage']?>"/>
+                <div class="product_image_1" style="margin-top: 50px; margin-left: 50px; width: 20px;">
+                    <img src="<?php echo $row->pathImage?>" style="width: 200px;"/>
                 </div>
 
             </div>
-            <div class="product_info">
-                <h1><?php echo $row['nom']; ?></h1>
+            <div class="product_info" style="margin-left: 350px; margin-top: -200px;">
+                <h1><?php echo $row->nom; ?></h1>
                 <div class="price">
 
-                    <h2 class="sale_price"><?php echo number_format($row['prix'],2); ?> $ <br> <?php echo $row['couleur']; ?></h2>
+                    <h3 class="sale_price"><?php echo number_format($row->prix,2); ?> $ <br> <?php echo $row->couleur; ?></h3>
                 </div>
 
                 <div class="product_description">
-                <p><?php echo $row['description'];?></p>
+                <p><?php echo $row->description;?></p>
                 </div>
 
                     <div class="buying">
-                        <div class="quantity">
-                            <label for="quantity">QTY:</label>
-                            <input type="text">
+
+                                <a href="panier?id=<?php echo $row->id?>" style="text-decoration:none"><p  style="color: black;">Ajouter au panier</p></a>
+                            </div>
+
                         </div>
-                        <div class="cart">
-                            <a href="#" class="add">Add to Cart <i class="fa fa-shopping-cart fa-lg"></i></a>
-
-                    </div>
-                </div>
 
                 </div>
 
+                </div>
+        </div>
+    </div>
+</div>
                 <?php
                 }
-                }
+
                 ?>
-                <footer>
-    @include('footer')
-</footer>
+    <br>
+    <br>
+    <br>
+    <br>
+
+@endsection

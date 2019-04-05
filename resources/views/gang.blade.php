@@ -1,10 +1,9 @@
-
 @extends('index')
 
 @section('content')
 
     <?php
-    $produits = DB::select("SELECT * FROM produit WHERE marque_id = 2");
+    $produits = DB::select("SELECT * FROM produit WHERE category_id = 3");
     foreach ($produits as $row) { ?>
     <div class="card-group" style="margin: 10px;padding: 10px; width: 400px; display: inline-block;">
         <div class="card" style="margin: 10px;">

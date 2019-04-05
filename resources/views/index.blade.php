@@ -36,8 +36,8 @@
 
 
                 @auth
-                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px;">Deconnextion</a></button>
-                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="register">Mon compte</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px; text-decoration:none;">Deconnextion</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="register" style="text-decoration:none">Mon compte</a></button>
                     <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
 
         </div>
@@ -74,24 +74,26 @@
 
     <div class="btn-group">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Trier par
+            Trier par Category
         </button>
         <div class="dropdown-menu">
             <a class="dropdown-item" href="t-shirt">T-shirt</a>
             <a class="dropdown-item" href="short">Short</a>
             <a class="dropdown-item" href="sac">Sac</a>
-
+            <a class="dropdown-item" href="gang">Gang</a>
 
         </div>
     </div>
     <div class="btn-group">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Trier par
+            Populaire
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">T-shirt</a>
-            <a class="dropdown-item" href="#">Short</a>
-            <a class="dropdown-item" href="#">Sac</a>
+            <a class="dropdown-item" href="#">AAAAAA</a>
+            <a class="dropdown-item" href="#">BBBBBB</a>
+            <a class="dropdown-item" href="#">CCCCCC</a>
+            <a class="dropdown-item" href="#">DDDDDD</a>
+            <a class="dropdown-item" href="#">EEEEEE</a>
 
         </div>
     </div>

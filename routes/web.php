@@ -74,6 +74,10 @@ Route::get('/sac', function () {
     return view('sac');
 });
 
+Route::get('/gang', function () {
+    return view('gang');
+});
+
 
 
 

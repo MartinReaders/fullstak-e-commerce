@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-@extends('index')
-=======
-
-
 @extends('layouts.app')
 
-
-
->>>>>>> version-final-page-dinsrtiption
 @section('content')
     <br>
     <br>
@@ -33,7 +25,7 @@
                 </div>
 
                 <div class="#" style="text-align: center;">
-                    <a href="/"><h2 style=" color: black;">Contunier vos Achat</h2></a>
+                    <a href="/" style="text-decoration: none;"><h2 style=" color: black;">Contunier vos Achat</h2></a>
                 </div>
                 <br>
                 <br>
@@ -44,9 +36,4 @@
         </div>
     </div>
 </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> version-final-page-dinsrtiption
 @endsection

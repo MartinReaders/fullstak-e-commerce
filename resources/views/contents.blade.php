@@ -12,10 +12,10 @@ foreach ($produits as $row) { ?>
   <img src="<?php echo $row->pathImage?>" style="border-radius: 5px; margin: 5px 5px;">
         <div class="game-card-overlay">
           <div class="overlay-button" id="overlay-double">
-                <a href="panier?id=<?php echo $row->id?>"><p>Ajouter au panier</p></a>
+                <a href="panier?id=<?php echo $row->id?>" style="text-decoration:none"><p>Ajouter au panier</p></a>
           </div>
             <div class="overlay-button" id="overlay-double">
-              <a href="ficher-produit?id=<?php echo $row->id?>">
+              <a href="ficher-produit?id=<?php echo $row->id?>" style="text-decoration:none">
           <p>Fiche produit</p></a></div>
         </div>
       </div>
