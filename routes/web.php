@@ -78,8 +78,17 @@ Route::get('/gang', function () {
     return view('gang');
 });
 
+Route::get('/changepassword', function () {
+    return view('changepassword');
+});
+Route::post('/changePassword','CompteController@changePassword')->name('changePassword');
 
 
+Route::get('/changename', function () {
+    return view('changename');
+});
+
+Route::post('/changeName','NameController@changeName')->name('changeName');
 
 Route::get('/panier', 'HomeController@panier')->name('panier');
 Route::get('/produitdel', 'HomeController@produitdel')->name('produitdel');

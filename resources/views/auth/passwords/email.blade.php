@@ -1,7 +1,4 @@
-@extends('layouts.app')
-<header>
-    @include('header')
-</header>
+@extends('index')
 
 @section('content')
 <div class="container">
@@ -47,7 +44,5 @@
         </div>
     </div>
 </div>
-<footer>
-    @include('footer')
-</footer>
+
 @endsection
