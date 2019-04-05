@@ -57,6 +57,5 @@ class HomeController extends Controller
             return view('panier', ['product' => $product]);
         }
 
-
 }
 

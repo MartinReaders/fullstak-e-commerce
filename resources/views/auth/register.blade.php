@@ -1,7 +1,5 @@
 @extends('index')
 
-
-
 @section('content')
     <br>
 <div class="container">

@@ -37,16 +37,16 @@
 
                 @auth
                     <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="logout" style="padding-right:10px; text-decoration:none;">Deconnextion</a></button>
-                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="register" style="text-decoration:none">Mon compte</a></button>
+                    <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="/register/" style="text-decoration:none">Mon compte</a></button>
                     <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
 
         </div>
         </div>
-        </div></a></div><a class="cart" href="panier">
+        </div></a></div><a class="cart" href="/panier/">
             <div class="cart-icon">1</div></a>
         @endauth @guest
-            <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="login" style="padding-right:10px;">SE CONNECTER</a></button>
-            <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="register">INSCRIPTION</a></button>
+            <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="/login/" style="padding-right:10px;">SE CONNECTER</a></button>
+            <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="/register/">INSCRIPTION</a></button>
             <p style="color:red;">Vous n'etes pas connecter</p>
             </div>
 
@@ -61,7 +61,7 @@
 <!-- nav-bar1 -->
 <section class="nav">
     <nav>
-        <div class="nav col-12 flex1"><a href="/"><span>Homme</span></a><a href="reebok"><span>Reebok</span><a href="nike"> <span>Nike</span></a><a href="lonsdale"> <span>Lonsdale</span></a><a href="adidas"> <span>Adidas</span></a><a href="tapout"> <span>Tapout</span></a><a href="everlast"> <span>Everlast</span></a>
+        <div class="nav col-12 flex1"><a href="/"><span>Acceuil</span></a><a href="/marque/1"><span>Reebok</span><a href="/marque/5"> <span>Nike</span></a><a href="/marque/2"> <span>Lonsdale</span></a><a href="/marque/6"> <span>Adidas</span></a><a href="/marque/3"> <span>Tapout</span></a><a href="/marque/4"> <span>Everlast</span></a>
     </nav>
 
 </section>
@@ -77,10 +77,10 @@
             Trier par Category
         </button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="t-shirt">T-shirt</a>
-            <a class="dropdown-item" href="short">Short</a>
-            <a class="dropdown-item" href="sac">Sac</a>
-            <a class="dropdown-item" href="gang">Gang</a>
+            <a class="dropdown-item" href="/category/1">T-shirt</a>
+            <a class="dropdown-item" href="/category/4">Short</a>
+            <a class="dropdown-item" href="/category/2">Sac</a>
+            <a class="dropdown-item" href="/category/3">Gang</a>
 
         </div>
     </div>
