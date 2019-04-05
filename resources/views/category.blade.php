@@ -3,22 +3,21 @@
 @section('content')
 
     <?php
-    $produits = DB::select("SELECT * FROM produit WHERE category_id = 2");
+
     foreach ($produits as $row) { ?>
     <div class="card-group" style="margin: 10px;padding: 10px; width: 400px; display: inline-block;">
         <div class="card" style="margin: 10px;">
             <div class="game-pic">
-                <img src="<?php echo $row->pathImage?>" style="border-radius: 5px; margin: 5px 5px;">
+                <img src="<?php echo '/'.$row->pathImage?>" style="border-radius: 5px; margin: 5px 5px;">
                 <div class="game-card-overlay">
                     <div class="overlay-button" id="overlay-double">
-                        <a href="panier?id=<?php echo $row->id?>" style="text-decoration:none"><p>Ajouter au panier</p></a>
+                        <a href="/panier/?id=<?php echo $row->id?>" style="text-decoration:none"><p>Ajouter au panier</p></a>
                     </div>
                     <div class="overlay-button" id="overlay-double">
-                        <a href="ficher-produit?id=<?php echo $row->id?>" style="text-decoration:none">
+                        <a href="/ficher-produit/?id=<?php echo $row->id?>" style="text-decoration:none">
                             <p>Fiche produit</p></a></div>
                 </div>
             </div>
-
 
             <div class="card-body">
                 <h5 class="card-title"><?php echo $row->nom; ?></h5>

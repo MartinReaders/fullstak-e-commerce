@@ -12,7 +12,7 @@ foreach ($produits as $row) { ?>
         <div class="top">
             <div class="product_images">
                 <div class="product_image_1" style="margin-top: 50px; margin-left: 50px; width: 20px;">
-                    <img src="<?php echo $row->pathImage?>" style="width: 200px;"/>
+                    <img src="<?php echo '/'.$row->pathImage?>" style="width: 200px;"/>
                 </div>
 
             </div>
@@ -29,7 +29,7 @@ foreach ($produits as $row) { ?>
 
                     <div class="buying">
 
-                                <a href="panier?id=<?php echo $row->id?>" style="text-decoration:none"><p  style="color: black;">Ajouter au panier</p></a>
+                                <a href="/panier/?id=<?php echo $row->id?>" style="text-decoration:none"><p  style="color: black;">Ajouter au panier</p></a>
                             </div>
 
                         </div>

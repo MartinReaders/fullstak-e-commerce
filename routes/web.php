@@ -24,7 +24,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
 Route::get('/ficher-produit', function () {
     return view('ficher-produit');
 });
@@ -38,48 +37,13 @@ Route::get('/content', function () {
     return view('contents');
 });
 
-Route::get('/reebok', function () {
-    return view('reebok');
-});
+Route::get('/category/{id}', 'ProduitController@category')->name('category');
 
-Route::get('/nike', function () {
-    return view('nike');
-});
+Route::get('/marque/{id}', 'ProduitController@marque')->name('marque');
 
-Route::get('/lonsdale', function () {
-    return view('lonsdale');
-});
+Route::get('/fiche-produit/{id}', 'ProduitController@marque')->name('fichier-produit');
 
-Route::get('/tapout', function () {
-    return view('tapout');
-});
-
-Route::get('/everlast', function () {
-    return view('everlast');
-});
-
-Route::get('/adidas', function () {
-    return view('adidas');
-});
-
-Route::get('/t-shirt', function () {
-    return view('t-shirt');
-});
-
-Route::get('/short', function () {
-    return view('short');
-});
-
-Route::get('/sac', function () {
-    return view('sac');
-});
-
-Route::get('/gang', function () {
-    return view('gang');
-});
-
-
-
+Route::get('/panier/{id}', 'ProduitController@marque')->name('panier');
 
 Route::get('/panier', 'HomeController@panier')->name('panier');
 Route::get('/produitdel', 'HomeController@produitdel')->name('produitdel');
