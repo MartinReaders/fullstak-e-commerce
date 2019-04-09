@@ -5,7 +5,9 @@
 <?php
 
 foreach ($product as $produit) {
+
     $prodentry = DB::select("SELECT * FROM produit WHERE " . $produit->produit_id . " = id");
+
     foreach ($prodentry as $prod) {
         echo "<div class=\"shoppingline\">
         <div class='card-group' style='margin: 10px;padding: 10px; width: 700px; margin-left: 350px;'>
@@ -18,7 +20,7 @@ foreach ($product as $produit) {
         <p class=\"lineitem\">" . $prod->description . "</p>
         <p class=\"lineitem\"> " . $prod->prix . " € TTC</p>
 
-        <a class=\"lineitem\" href=\"produitdel?id=" . $prod->id . "\" style='color: red; border-radius: 5px; text-decoration:none'> Suprimer </a></div>
+        <a class=\"lineitem\" href=\"/produitdel/" . $produit->id . "\" style='color: red; border-radius: 5px; text-decoration:none'> Suprimer </a></div>
         </div>
         </div>
         </div>";

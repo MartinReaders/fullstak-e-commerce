@@ -45,16 +45,11 @@ class HomeController extends Controller
         }
     }
 
-    public function produitdel()
+    public function produitdel($id)
     {
 
-            $userid = \Auth::user()->id;
-            $produit = $_GET['id'];
-            $param1 = DB::table('panier')->where('user_id', $userid);
-            DB::table('panier')->where('produit_id', $produit)->union($param1)->delete();
-            $id = \Auth::user()->id;
-            $product = DB::select("SELECT * FROM panier WHERE " . $userid . " = user_id");
-            return view('panier', ['product' => $product]);
+            $row=DB::table('panier')->where('id', $id)->delete();
+            return $this->panier();
         }
 
 }
