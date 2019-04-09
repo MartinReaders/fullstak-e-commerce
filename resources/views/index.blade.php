@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +26,7 @@
 <!-- header -->
 
 <section class="header">
-    <header><a class="logo" href="/"><img src="img/bitcoin.png" alt="">E-Sport</a>
+    <header><a class="logo" href="/">E-Sport</a>
         <div class="search">
             <input class="search__text" type="text"/>
             <button class="search__button">
@@ -37,6 +39,11 @@
 
 
                 @auth
+                    <?php
+
+                    $id=\Illuminate\Support\Facades\Auth::id();
+                    $req=count(DB::table('panier')->where('user_id',$id)->get());
+                    ?>
                     <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="/logout/" style="padding-right:10px; text-decoration:none;">Deconnextion</a></button>
                     <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; "><a href="/home/" style="text-decoration:none">Mon compte</a></button>
                     <p style="color:green;">Bonjour {{ Auth::user()->name }} </p>
@@ -44,7 +51,7 @@
         </div>
         </div>
         </div></a></div><a class="cart" href="/panier/">
-            <div class="cart-icon">1</div></a>
+            <div class="cart-icon"><?php print_r($req);?></div></a>
         @endauth @guest
             <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="/login/" style="padding-right:10px;">SE CONNECTER</a></button>
             <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="/register/">INSCRIPTION</a></button>
@@ -159,9 +166,8 @@
 </footer>
 <!-- Footer -->
 
-
-
-
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

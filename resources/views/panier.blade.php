@@ -7,7 +7,9 @@
     global $total;
 if (empty(!$product)) {
 foreach ($product as $produit) {
+
     $prodentry = DB::select("SELECT * FROM produit WHERE " . $produit->produit_id . " = id");
+
     foreach ($prodentry as $prod) {
         $total = ($total + $prod->prix);
         echo "<div class=\"shoppingline\">
@@ -21,7 +23,11 @@ foreach ($product as $produit) {
         <p class=\"lineitem\">" . $prod->description . "</p>
         <p class=\"lineitem\"> " . $prod->prix . " € TTC</p>
 
+<<<<<<< HEAD
         <a class=\"lineitem\" href=\"/produitdel/?id=" . $prod->id . "\" style='color: red; border-radius: 5px; text-decoration:none'> Suprimer </a></div>
+=======
+        <a class=\"lineitem\" href=\"/produitdel/" . $produit->id . "\" style='color: red; border-radius: 5px; text-decoration:none'> Suprimer </a></div>
+>>>>>>> panier-ajout
         </div>
         </div>
         </div>";
