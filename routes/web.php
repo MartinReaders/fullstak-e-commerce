@@ -37,6 +37,10 @@ Route::get('/content', function () {
     return view('contents');
 });
 
+Route::get('/valider', function () {
+    return view('valider');
+});
+
 Route::get('/category/{id}', 'ProduitController@category')->name('category');
 
 Route::get('/marque/{id}', 'ProduitController@marque')->name('marque');
