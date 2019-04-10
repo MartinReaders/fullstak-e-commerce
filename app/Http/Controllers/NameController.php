@@ -16,7 +16,7 @@ class NameController extends Controller
         $user = Auth::user();
         $user->name = $request->get('new-name');
         $user->save();
-        return redirect()->back()->with("success","Password changed successfully !");
+        return redirect()->back()->with("success","Votre nom a été bien modifié !");
     }
 
 }
