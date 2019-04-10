@@ -26,13 +26,16 @@
 <!-- header -->
 
 <section class="header">
-    <header><a class="logo" href="/">E-Sport</a>
-        <div class="search">
-            <input class="search__text" type="text"/>
+    <header>
+        <a class="logo" href="/">E-Sport</a>
+        <form action="{{ route('search')}}">
+        <div class="search" style="width: 200%;">
+            <input class="search__text" type="text" name="query" value="{{request()->input('query')}}"/>
             <button class="search__button">
                 <div class="search-icon"></div>
             </button>
         </div>
+        </form>
         <div class="info"><div class="cour"><img src="img/like.png" alt="" class="like"></div><a href="">Liste de souhaits</a><a href="/">Livraison&nbsp;et&nbsp;Paiement</a><a href="/">Nous contacter</a><a href="#"><!-- Button trigger modal -->
 
 
