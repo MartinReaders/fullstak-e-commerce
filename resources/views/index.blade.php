@@ -54,7 +54,7 @@
         </div>
         </div>
         </div></a></div><a class="cart" href="/panier/">
-            <div class="cart-icon"><?php print_r($req);?></div></a>
+            <div class="cart-icon" style="width: 150%;height: 150%;"><?php print_r($req);?></div></a>
         @endauth @guest
             <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6; text-align: center;"><a href="/login/" style="padding-right:10px;">SE CONNECTER</a></button>
             <button style="background-color: #00d8d6;border-radius: 5px;border-color:#00d8d6;"><a href="/register/">INSCRIPTION</a></button>
@@ -92,19 +92,6 @@
             <a class="dropdown-item" href="/category/4">Short</a>
             <a class="dropdown-item" href="/category/2">Sac</a>
             <a class="dropdown-item" href="/category/3">Gang</a>
-
-        </div>
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Populaire
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">AAAAAA</a>
-            <a class="dropdown-item" href="#">BBBBBB</a>
-            <a class="dropdown-item" href="#">CCCCCC</a>
-            <a class="dropdown-item" href="#">DDDDDD</a>
-            <a class="dropdown-item" href="#">EEEEEE</a>
 
         </div>
     </div>
