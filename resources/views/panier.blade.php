@@ -22,15 +22,15 @@ foreach ($product as $produit) {
         <p class=\"lineitem\">" . $prod->couleur . "</p>
         <p class=\"lineitem\">" . $prod->description . "</p>
         <p class=\"lineitem\"> " . $prod->prix . " € TTC</p>
-
         <a class=\"lineitem\" href=\"/produitdel/" . $produit->id . "\" style='color: red; border-radius: 5px; text-decoration:none'> Suprimer </a></div>
+
         </div>
         </div>
         </div>";
     }
 }
     echo "<div class='card-group' style='width: 350px; padding: 10px; color: black; background-color: white;  margin-left: 685px;'> <h1> Prix Total : $total €</h1></div>
-<a href='/' style='text-decoration: none;'> <p style='width: 350px; padding: 10px; color: black; background-color: white;  margin-left: 685px; text-align: right;
+<a href='/payement/' style='text-decoration: none;'> <p style='width: 350px; padding: 10px; color: black; background-color: white;  margin-left: 685px; text-align: right;
 font-size: 2em;'>Valider</p></a>";
 
 
@@ -54,5 +54,22 @@ color: black; background-color: white;  margin-left: 485px;'>
 
 
 ?>
-
+<div class="#" style="margin-left: 915px; margin-top: -65px;">
+<form action="{{ url('home') }}" method="POST">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script
+        var stripe = Stripe('pk_test_oyi8gOloTgRdjUGNcdxOYGsl00fQfR0NYy');
+        var elements = stripe.elements();
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_oyi8gOloTgRdjUGNcdxOYGsl00fQfR0NYy"
+        data-amount="{{$total * 100}}"
+        data-name="Demo Site"
+        data-description="Paiment"
+        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale="auto"
+        data-currency="eur">
+    </script>
+</form>
+</div>
 @endsection
+
