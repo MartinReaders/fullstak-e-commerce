@@ -29,7 +29,7 @@
     <header>
         <a class="logo" href="/">E-Sport</a>
         <form action="{{ route('search')}}">
-        <div class="search" style="width: 200%;">
+        <div class="search" style="width: 100%;">
             <input class="search__text" type="text" name="query" value="{{request()->input('query')}}"/>
             <button class="search__button">
                 <div class="search-icon"></div>

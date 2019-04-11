@@ -31,6 +31,8 @@ Route::get('/ficher-produit', function () {
     return view('ficher-produit');
 });
 
+Route::get("api","Prod@index");
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
