@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('contents');
 });
+Route::get('payement', function () {
+    return view('payement');
+});
 
 Route::get('/connecter', function () {
     return view('connecter');
