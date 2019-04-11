@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use http\Client\Curl\User;
+use DB;
 
 class SearchController extends Controller
+
 {
-    public function index(Request $request){
-        $category = $request->input('category');
+    public function search(Request $request){
 
-        //now get all user and services in one go without looping using eager loading
-        //In your foreach() loop, if you have 1000 users you will make 1000 queries
 
-        $users = User::with('services', function($query) use ($category) {
-            $query->where('category', 'LIKE', '%' . $category . '%');
-        })->get();
+        $query = $request->input('query');
+        $products = (DB::select("SELECT * FROM produit WHERE nom LIKE '%$query%' "));
+        $counter = count(DB::select("SELECT * FROM produit WHERE nom LIKE '%$query%' "));
+        //return $product;
+        return view('search-results')->withProducts($products)->withCounter($counter);
 
-        return view('index', compact('users'));
     }
 }

@@ -66,4 +66,5 @@ Route::post('/changeName','NameController@changeName')->name('changeName');
 Route::get('/panier', 'HomeController@panier')->name('panier');
 Route::get('/produitdel/{id}', 'HomeController@produitdel')->name('produitdel');
 
-Route::get('searchtest', 'SearchController@index');
+Route::get('/search', 'SearchController@search')->name('search');
+

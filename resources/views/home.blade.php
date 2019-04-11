@@ -5,7 +5,7 @@
     <br>
 
 <div class="container">
-    <p style="color:green;">Bienvenue sur votre compte: {{ Auth::user()->name }} </p>
+    <p style="color:green;text-align: center">Bienvenue sur votre compte: {{ Auth::user()->name }} </p>
     <br>
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="#" style="text-align: center;">
-                    <a href="/" style="text-decoration: none;"><h2 style=" color: black;">Contunier vos Achat</h2></a>
+                    <a href="/" style="text-decoration: none;"><h2 style=" color: black;">Continuez Vos Achats</h2></a>
                 </div>
                 <br>
                 <br>

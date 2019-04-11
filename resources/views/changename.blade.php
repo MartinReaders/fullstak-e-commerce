@@ -32,10 +32,10 @@
         {{ csrf_field() }}
         <div class="form-group{{ $errors->has('new-name') ? ' has-error' : '' }}">
 
-            <label for="current-name" class="col-md-6 control-label">Name Actuel</label>
+            <label for="current-name" class="col-md-6 control-label">Nom Actuel</label>
             <input id="current-name" type="text" class="form-control" name="current-name" required style="width:300px">
 
-        <label for="new-name" class="col-md-4 control-label">New Name</label>
+        <label for="new-name" class="col-md-4 control-label">Nouvelle Nom</label>
         <input id="new-name" type="text" class="form-control" name="new-name" required style="width:300px">
 
         @if ($errors->has('new-name'))
