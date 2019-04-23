@@ -22,7 +22,7 @@
 
             <div class="card-body">
                 <h5 class="card-title"><?php echo $row->nom; ?></h5>
-                <p class="card-text"><span style="color: red"><?php echo number_format($row->prix,2); ?> $ <?php echo $row->couleur; ?></p>
+                <p class="card-text"><span style="color: red"><?php echo number_format($row->prix,2); ?> € <?php echo $row->couleur; ?></p>
             </div>
             <div class="card-footer">
                 <small class="text-muted">Tailles : S, M, L, XL, 2 XL</small>

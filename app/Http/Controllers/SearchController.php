@@ -15,7 +15,7 @@ class SearchController extends Controller
         $query = $request->input('query');
         $products = (DB::select("SELECT * FROM produit WHERE nom LIKE '%$query%' "));
         $counter = count(DB::select("SELECT * FROM produit WHERE nom LIKE '%$query%' "));
-        //return $product;
+
         return view('search-results')->withProducts($products)->withCounter($counter);
 
     }

@@ -20,7 +20,7 @@ foreach ($produits as $row) { ?>
                 <h1><?php echo $row->nom; ?></h1>
                 <div class="price">
 
-                    <h3 class="sale_price"><?php echo number_format($row->prix,2); ?> $ <br> <?php echo $row->couleur; ?></h3>
+                    <h3 class="sale_price"><?php echo number_format($row->prix,2); ?> € <br> <?php echo $row->couleur; ?></h3>
                 </div>
 
                 <div class="product_description">
