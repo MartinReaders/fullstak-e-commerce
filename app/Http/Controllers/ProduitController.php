@@ -19,11 +19,12 @@ class ProduitController extends Controller
         $produits = DB::select("SELECT * FROM produit WHERE category_id = ".$id);
         return view('category')->withProduits($produits);
     }
-    function ficher($id){
+    function ficher(){
 
         $produits = DB::select("SELECT * FROM produit where id = $_GET[id]");
         return view('ficher-produit')->withProduits($produits);
     }
+
 
 
 }

@@ -11,25 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('contents');
-});
-Route::get('payement', function () {
-    return view('payement');
-});
-
-Route::get('/connecter', function () {
-    return view('connecter');
-});
+Route::get('/', 'content@contents');
 
 
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/ficher-produit', function () {
-    return view('ficher-produit');
-});
+Route::get('/ficher-produit', 'ProduitController@ficher');
+
 
 Route::get("api","Prod@index");
 
@@ -40,10 +30,6 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/content', function () {
     return view('contents');
-});
-
-Route::get('/valider', function () {
-    return view('valider');
 });
 
 Route::get('/category/{id}', 'ProduitController@category')->name('category');

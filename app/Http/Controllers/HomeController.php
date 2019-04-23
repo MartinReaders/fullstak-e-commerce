@@ -31,6 +31,7 @@ class HomeController extends Controller
     public function panier()
     {
         if (isset($_GET['id'])) {
+
             $userid = \Auth::user()->id;
             $prodid = $_GET['id'];
             $values = array('user_id' => $userid, 'produit_id' => $prodid);

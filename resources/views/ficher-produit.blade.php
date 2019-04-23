@@ -5,7 +5,7 @@
     <br>
 
 <?php
-$produits = DB::select("SELECT * FROM produit where id = $_GET[id]");
+
 foreach ($produits as $row) { ?>
 <div id="wrap" style="display: inline-block; background-color: white; margin-left: 300px; width: 600px;">
     <div id="product_layout_1">

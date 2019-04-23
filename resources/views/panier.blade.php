@@ -29,9 +29,7 @@ foreach ($product as $produit) {
         </div>";
     }
 }
-    echo "<div class='card-group' style='width: 350px; padding: 10px; color: black; background-color: white;  margin-left: 685px;'> <h1> Prix Total : $total €</h1></div>
-<a href='/payement/' style='text-decoration: none;'> <p style='width: 350px; padding: 10px; color: black; background-color: white;  margin-left: 685px; text-align: right;
-font-size: 2em;'>Valider</p></a>";
+    echo "<div class='card-group' style='width: 350px; padding: 30px; color: black; background-color: white;  margin-left: 685px;'> <h1> Prix Total : $total €</h1></div><br><br>";
 
 
 } else {
